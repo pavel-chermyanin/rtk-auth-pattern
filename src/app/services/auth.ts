@@ -21,11 +21,18 @@ export const authApi = api.injectEndpoints({
         body: data,
       }),
     }),
+    refresh: builder.mutation<any, any>({
+      query: (refresh) => ({
+        url: `/authentification/token/refresh/`,
+        method: "POST",
+        body: refresh,
+      }),
+    }),
   }),
 });
 
-export const {useAuthPhoneNumberMutation,useLoginMutation} = authApi;
+export const {useAuthPhoneNumberMutation,useLoginMutation, useRefreshMutation} = authApi;
 
 export const {
-  endpoints: { authPhoneNumber,login },
+  endpoints: { authPhoneNumber,login, refresh },
 } = authApi;

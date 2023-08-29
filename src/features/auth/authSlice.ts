@@ -17,7 +17,14 @@ const slice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    logout: () => initialState,
+    logout: () => {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("accessTime");
+      localStorage.removeItem("refreshToken");
+      localStorage.removeItem("refreshTime");
+
+      return initialState;
+    },
   },
   extraReducers: (builder) => {
     builder.addMatcher(
@@ -26,17 +33,6 @@ const slice = createSlice({
         state.isAuthenticated = true;
       }
     );
-    // .addMatcher(
-    //   authApi.endpoints.register.matchFulfilled,
-    //   (state, action) => {
-    //     state.user = action.payload;
-    //     state.isAuthenticated = true;
-    //   }
-    // )
-    // .addMatcher(authApi.endpoints.current.matchFulfilled, (state, action) => {
-    //   state.user = action.payload;
-    //   state.isAuthenticated = true;
-    // });
   },
 });
 export const { logout } = slice.actions;
@@ -45,4 +41,3 @@ export default slice.reducer;
 
 export const selectIsAuthenticated = (state: RootState) =>
   state.auth.isAuthenticated;
-export const selectUser = (state: RootState) => state.auth.user;
