@@ -1,0 +1,309 @@
+{
+    "id": "47d20399-4492-4232-9b3b-d474d33d94c3",
+    "slug": "Doktorov_Pavel_Olegovich_d94c3",
+    "first_name": "Павел",
+    "patronymic": "Олегович",
+    "last_name": "Докторов",
+    "gender": "0",
+    "gender_label": "Мужчина",
+    "avatar": "https://dj-front.doct24.com/media/users_avatar/maxresdefault.jpg",
+    "nearest_reception_time": 1693337400,
+    "country": "RU",
+    "country_label": "Russia",
+    "city": "точка-jkjkjkdddd",
+    "specialization": [
+        {
+            "id": 8,
+            "name": "Вертебролог",
+            "is_moderated": true
+        },
+        {
+            "id": 64,
+            "name": "Психолог",
+            "is_moderated": true
+        }
+    ],
+    "healing_diseases": {},
+    "education_type_label": null,
+    "higher_education": [],
+    "work_expirience": [
+        {
+            "id": 340,
+            "organization": "газпром",
+            "position": "турболазер",
+            "start_date": -27107481600,
+            "end_date": 7952342400,
+            "until_now": false,
+            "is_moderated": true
+        },
+        {
+            "id": 336,
+            "organization": "rккккddddddddddddd",
+            "position": "rаааа",
+            "start_date": -24298876800,
+            "end_date": 7983878400,
+            "until_now": false,
+            "is_moderated": true
+        }
+    ],
+    "advanced_training": [],
+    "age": 32,
+    "free_reception_time": [
+        {
+            "time": 1693353600
+        },
+        {
+            "time": 1693355400
+        },
+        {
+            "time": 1693357200
+        },
+        {
+            "time": 1693359000
+        },
+        {
+            "time": 1693360800
+        },
+        {
+            "time": 1693362600
+        },
+        {
+            "time": 1693366200
+        },
+        {
+            "time": 1693364400
+        },
+        {
+            "time": 1693368000
+        },
+        {
+            "time": 1693369800
+        },
+        {
+            "time": 1693371600
+        },
+        {
+            "time": 1693373400
+        },
+        {
+            "time": 1693375200
+        },
+        {
+            "time": 1693377000
+        },
+        {
+            "time": 1693378800
+        },
+        {
+            "time": 1693380600
+        },
+        {
+            "time": 1693382400
+        },
+        {
+            "time": 1693384200
+        },
+        {
+            "time": 1693386000
+        },
+        {
+            "time": 1693387800
+        },
+        {
+            "time": 1693391400
+        },
+        {
+            "time": 1693389600
+        },
+        {
+            "time": 1693393200
+        },
+        {
+            "time": 1693395000
+        },
+        {
+            "time": 1693396800
+        },
+        {
+            "time": 1693398600
+        },
+        {
+            "time": 1693400400
+        },
+        {
+            "time": 1693402200
+        },
+        {
+            "time": 1693404000
+        },
+        {
+            "time": 1693405800
+        },
+        {
+            "time": 1693407600
+        },
+        {
+            "time": 1693411200
+        },
+        {
+            "time": 1693409400
+        },
+        {
+            "time": 1693413000
+        },
+        {
+            "time": 1693607400
+        },
+        {
+            "time": 1693609200
+        },
+        {
+            "time": 1693611000
+        },
+        {
+            "time": 1693693800
+        },
+        {
+            "time": 1693697400
+        },
+        {
+            "time": 1693695600
+        },
+        {
+            "time": 1693783800
+        },
+        {
+            "time": 1693782000
+        },
+        {
+            "time": 1693780200
+        },
+        {
+            "time": 1694215800
+        },
+        {
+            "time": 1694214000
+        },
+        {
+            "time": 1694127600
+        },
+        {
+            "time": 1694212200
+        },
+        {
+            "time": 1693956600
+        },
+        {
+            "time": 1694125800
+        },
+        {
+            "time": 1694129400
+        },
+        {
+            "time": 1694043000
+        },
+        {
+            "time": 1693953000
+        },
+        {
+            "time": 1693954800
+        },
+        {
+            "time": 1694039400
+        },
+        {
+            "time": 1694041200
+        },
+        {
+            "time": 1693870200
+        },
+        {
+            "time": 1693866600
+        },
+        {
+            "time": 1693868400
+        },
+        {
+            "time": 1693438200
+        },
+        {
+            "time": 1693434600
+        },
+        {
+            "time": 1693436400
+        },
+        {
+            "time": 1693524600
+        },
+        {
+            "time": 1693521000
+        },
+        {
+            "time": 1693522800
+        },
+        {
+            "time": 1693420200
+        },
+        {
+            "time": 1693422000
+        },
+        {
+            "time": 1693337400
+        },
+        {
+            "time": 1693416600
+        },
+        {
+            "time": 1693418400
+        },
+        {
+            "time": 1693423800
+        }
+    ],
+    "rank": 2,
+    "rank_label": "профессор",
+    "scientific_degree": 2,
+    "scientific_degree_label": "доктор медицинских наук",
+    "category": 2,
+    "category_label": "первая",
+    "text_chat_price": 31000,
+    "video_chat_price": 11144,
+    "feedback_count": 0,
+    "ratings": [
+        {
+            "id": 1,
+            "name": "Рейтинг",
+            "value": 4.9
+        },
+        {
+            "id": 2,
+            "name": "Пунктуальность",
+            "value": 4.9
+        },
+        {
+            "id": 3,
+            "name": "Внимательность",
+            "value": 4.9
+        },
+        {
+            "id": 4,
+            "name": "Профессионализм",
+            "value": 4.9
+        },
+        {
+            "id": 5,
+            "name": "Ответственность",
+            "value": 4.9
+        }
+    ],
+    "ratings_rating": 4.9,
+    "seniority": 9,
+    "rating_values_count": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+    },
+    "is_favorite": false
+}

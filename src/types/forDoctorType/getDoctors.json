@@ -1,0 +1,55 @@
+{
+    "id": "5c5a5fb9-e173-4361-ae89-3738ac22a486",
+    "slug": "_2a486",
+    "first_name": "",
+    "patronymic": "",
+    "last_name": "",
+    "gender": "0",
+    "gender_label": "Мужчина",
+    "specialization": [],
+    "ratings": [
+        {
+            "id": 1,
+            "name": "Рейтинг",
+            "value": 0
+        },
+        {
+            "id": 2,
+            "name": "Пунктуальность",
+            "value": 0
+        },
+        {
+            "id": 3,
+            "name": "Внимательность",
+            "value": 0
+        },
+        {
+            "id": 4,
+            "name": "Профессионализм",
+            "value": 0
+        },
+        {
+            "id": 5,
+            "name": "Ответственность",
+            "value": 0
+        }
+    ],
+    "ratings_rating": 0,
+    "seniority": 0,
+    "text_chat_price": 0,
+    "video_chat_price": 0,
+    "avatar": null,
+    "nearest_reception_time": null,
+    "free_reception_time": [],
+    "education_type_label": null,
+    "higher_education": [],
+    "work_expirience": [],
+    "advanced_training": [],
+    "rank": 4,
+    "rank_label": "4",
+    "scientific_degree": 0,
+    "scientific_degree_label": "нет",
+    "category": 3,
+    "category_label": "высшая",
+    "is_favorite": false
+}
