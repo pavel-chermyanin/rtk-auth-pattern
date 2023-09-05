@@ -18,10 +18,9 @@ const slice = createSlice({
   initialState,
   reducers: {
     logout: () => {
+      console.log('logout')
       localStorage.removeItem("accessToken");
-      localStorage.removeItem("accessTime");
       localStorage.removeItem("refreshToken");
-      localStorage.removeItem("refreshTime");
 
       return initialState;
     },

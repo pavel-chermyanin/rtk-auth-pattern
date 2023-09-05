@@ -26,6 +26,7 @@ export const authApi = api.injectEndpoints({
         url: `/authentification/token/refresh/`,
         method: "POST",
         body: refresh,
+        meta: { requiresToken: true },
       }),
     }),
   }),

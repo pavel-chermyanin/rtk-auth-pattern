@@ -1,3 +1,6 @@
+
+// GET user/me/user
+
 export interface UserShortModel {
   uid: string;
   first_name: string;

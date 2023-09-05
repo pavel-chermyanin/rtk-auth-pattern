@@ -7,6 +7,8 @@ import { DoctorRating } from "./helperTypes/DoctorRating";
 import { DoctorSpecialization } from "./helperTypes/DoctorSpecialization";
 import { DoctorWorkExpirience } from "./helperTypes/DoctorWorkExpirience";
 
+// GET user/me/doctor
+
 export interface DoctorUser {
   user: UserShortModel;
   slug: string;

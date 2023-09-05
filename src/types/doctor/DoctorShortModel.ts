@@ -5,6 +5,10 @@ import { DoctorRating } from "./helperTypes/DoctorRating";
 import { DoctorSpecialization } from "./helperTypes/DoctorSpecialization";
 import { DoctorWorkExpirience } from "./helperTypes/DoctorWorkExpirience";
 
+// модель доктора в каждой консультации
+// GET doctors/
+// GET doctors/favorites/by_patient/
+
 export interface DoctorShortModel {
   id: string;
   slug: string;

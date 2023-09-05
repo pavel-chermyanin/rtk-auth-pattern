@@ -12,14 +12,10 @@ listenerMiddleware.startListening({
     listenerApi.cancelActiveListeners();
 
     if (action.payload.access) {
-      const accessTime: { exp: number } = jwtDecode(action.payload.access);
       localStorage.setItem("accessToken", action.payload.access);
-      localStorage.setItem("accessTime", String(accessTime.exp));
     }
     if (action.payload.refresh) {
-      const refreshTime: { exp: number } = jwtDecode(action.payload.refresh);
       localStorage.setItem("refreshToken", action.payload.refresh);
-      localStorage.setItem("refreshTime", String(refreshTime.exp));
     }
   },
 });

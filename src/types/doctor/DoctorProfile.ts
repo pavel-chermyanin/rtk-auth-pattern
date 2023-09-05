@@ -1,4 +1,7 @@
 import { DoctorShortModel } from "./DoctorShortModel";
+
+// GET doctors/{user}/
+
 export interface DoctorProfile extends DoctorShortModel {
   country: string;
   country_label: string;
