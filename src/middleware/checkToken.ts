@@ -2,26 +2,25 @@ import { Middleware } from "@reduxjs/toolkit";
 import { logout } from "../features/auth/authSlice";
 import { store } from "../app/store";
 import { useRefreshMutation } from "../app/services/auth";
+import { refreshAccessToken } from "./refreshToken";
 
 const checkToken: Middleware = () => (next) => async (action) => {
-  const [refreshMutation] = useRefreshMutation();
   const accessToken = localStorage.getItem("accessToken");
   const refreshToken = localStorage.getItem("refreshToken");
 
-  if (!accessToken || !refreshToken) {
-    store.dispatch(logout());
-    return;
-  }
-
   if (action.meta && action.meta.requiresToken) {
     // Проверка токена
+    if (!accessToken || !refreshToken) {
+      store.dispatch(logout());
+      return;
+    }
     const accessTokenData = parseJwt(accessToken);
     if (accessTokenData.exp * 1000 < Date.now()) {
-      const refreshResponse = await refreshMutation({
-        refreshToken,
-      }).unwrap();
-      if (refreshResponse.error) {
-        store.dispatch(logout()); 
+      try {
+        // Вызов функции для обновления токена
+        await refreshAccessToken(refreshToken);
+      } catch (error) {
+        store.dispatch(logout());
       }
     }
   }
