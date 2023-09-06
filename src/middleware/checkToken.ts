@@ -1,7 +1,6 @@
 import { Middleware } from "@reduxjs/toolkit";
 import { logout } from "../features/auth/authSlice";
 import { store } from "../app/store";
-import { useRefreshMutation } from "../app/services/auth";
 import { refreshAccessToken } from "./refreshToken";
 
 const checkToken: Middleware = () => (next) => async (action) => {
@@ -34,4 +33,6 @@ const parseJwt = (token: string) => {
   const base64 = base64Url.replace("-", "+").replace("_", "/");
   return JSON.parse(atob(base64));
 };
+
+
 export default checkToken;
