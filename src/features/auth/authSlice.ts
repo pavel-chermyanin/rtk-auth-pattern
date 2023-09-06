@@ -1,12 +1,8 @@
 import { RootState } from "./../../app/store";
-// import { User } from '@prisma/client';
 import { createSlice } from "@reduxjs/toolkit";
 import { authApi } from "../../app/services/auth";
 
-// interface InitialState {
-//   user: (User & { token: string }) | null;
-//   isAuthenticated: boolean;
-// }
+
 
 const initialState: any = {
   // user: null,
