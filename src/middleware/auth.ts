@@ -2,12 +2,10 @@ import { createListenerMiddleware } from "@reduxjs/toolkit";
 import { authApi } from "../app/services/auth";
 import jwtDecode from "jwt-decode";
 
-export const listenerMiddleware = createListenerMiddleware();
+export const authMiddleware = createListenerMiddleware();
 
-listenerMiddleware.startListening({
-  matcher:
-    authApi.endpoints.login.matchFulfilled ||
-    authApi.endpoints.refresh.matchFulfilled,
+authMiddleware.startListening({
+  matcher: authApi.endpoints.login.matchFulfilled,
   effect: async (action, listenerApi) => {
     listenerApi.cancelActiveListeners();
 

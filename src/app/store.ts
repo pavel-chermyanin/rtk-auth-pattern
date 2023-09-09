@@ -1,8 +1,8 @@
-import checkToken from "./../middleware/checkToken";
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import auth from "../features/auth/authSlice";
 
-import { listenerMiddleware } from "../middleware/auth";
+import { authMiddleware } from "../middleware/auth";
+import { refreshMiddleware } from "../middleware/refresh";
 import { api } from "./services/api";
 
 export const store = configureStore({
@@ -12,8 +12,9 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware()
-      .concat(api.middleware, checkToken)
-      .prepend(listenerMiddleware.middleware);
+      .concat(api.middleware)
+      .prepend(refreshMiddleware.middleware)
+      .prepend(authMiddleware.middleware);
   },
 });
 
