@@ -1,10 +1,6 @@
-// import { User } from '@prisma/client';
-import { api } from './api';
+import { apiSlice } from "../../app/api/apiSlice";
 
-// export type UserData = Omit<User, 'id'>;
-// type ResponseLoginData = User & { token: string };
-
-export const authApi = api.injectEndpoints({
+export const authApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     // Получить код подтверждения номера телефона через flash call (без авторизации)
     authPhoneNumber: builder.mutation<any, any>({
@@ -21,18 +17,12 @@ export const authApi = api.injectEndpoints({
         body: data,
       }),
     }),
-    refresh: builder.mutation<any, any>({
-      query: (refresh) => ({
-        url: `/authentification/token/refresh/`,
-        method: "POST",
-        body: refresh,
-      }),
-    }),
   }),
 });
 
-export const {useAuthPhoneNumberMutation,useLoginMutation, useRefreshMutation} = authApi;
+
+export const { useAuthPhoneNumberMutation, useLoginMutation } = authApi;
 
 export const {
-  endpoints: { authPhoneNumber,login, refresh },
+  endpoints: { authPhoneNumber, login },
 } = authApi;

@@ -1,7 +1,7 @@
 
-import { api } from "../api";
+import { apiSlice } from "../../app/api/apiSlice";
 
-export const consultationDoctorApi = api.injectEndpoints({
+export const consultationDoctorApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getDoctorConsultations: builder.query<any, any>({
       query: () => ({
@@ -18,3 +18,5 @@ export const { useGetDoctorConsultationsQuery } =
 export const {
   endpoints: {  },
 } = consultationDoctorApi;
+
+

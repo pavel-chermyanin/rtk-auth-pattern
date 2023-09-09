@@ -1,6 +1,6 @@
-import { api } from "../api";
+import { apiSlice } from "../../app/api/apiSlice";
 
-export const advancedTrainingApi = api.injectEndpoints({
+export const advancedTrainingApi = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getAdvancedTraining: builder.query<any, any>({
       query: () => ({

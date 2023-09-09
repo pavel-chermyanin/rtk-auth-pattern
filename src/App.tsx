@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useAppDispatch } from "./app/hooks";
 import {
   useAuthPhoneNumberMutation,
   useLoginMutation,
-} from "./app/services/auth";
+} from "./features/auth/authApi";
+import { setCredentials } from "./features/auth/authSlice";
 
 function App() {
+  const dispatch = useAppDispatch();
   const [authPhoneNumber] = useAuthPhoneNumberMutation();
   const [login] = useLoginMutation();
   const [phone, setPhone] = useState("");
@@ -14,9 +17,14 @@ function App() {
     setGender(event.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     authPhoneNumber({ phone_number: "+" + phone });
-    login({ phone_number: phone, code: "1111", who_am_i: gender });
+    const tokens = await login({
+      phone_number: phone,
+      code: "1111",
+      who_am_i: gender,
+    }).unwrap();
+    dispatch(setCredentials(tokens));
   };
 
   return (
