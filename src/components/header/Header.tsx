@@ -12,7 +12,7 @@ export const Header: React.FC<HeaderProps> = () => {
           <Link to="/login">Login</Link>
         </li>
         <li>
-          <Link to="/doctor-profile">Профиль</Link>
+          <Link to="/consultation">Профиль</Link>
         </li>
       </ul>
     </div>

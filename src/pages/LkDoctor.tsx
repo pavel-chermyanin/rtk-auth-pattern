@@ -1,5 +1,17 @@
+import { isValidInputTimeValue } from "@testing-library/user-event/dist/utils";
 import React from "react";
-interface LkDoctorProps {}
-export const LkDoctor: React.FC<LkDoctorProps> = () => {
-  return <h1>LkDoctor</h1>;
+import { useGetDoctorConsultationsQuery } from "../features/doctors/consultations";
+export const LkDoctor = () => {
+  const { data, isLoading} = useGetDoctorConsultationsQuery();
+  console.log(data);
+  if(isLoading) {
+    return <p>Загрузка</p>
+  }
+  return (
+    <ul>
+      {data ? data.map((item: any) => {
+        return <li>{item.id}</li>;
+      }): <li>консультации</li>}
+    </ul>
+  );
 };
