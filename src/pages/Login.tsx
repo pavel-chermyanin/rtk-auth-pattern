@@ -1,26 +1,33 @@
-import React, { useState } from "react";
-import { useAppDispatch } from "../app/hooks";
+import React, { useEffect, useState } from "react";
+import { useAppDispatch } from "../store/hooks";
 import {
   useAuthPhoneNumberMutation,
+  useGetMeUserQuery,
   useLoginMutation,
 } from "../features/auth/authApi";
-import { setCredentials } from "../features/auth/authSlice";
+import { setCredentials, setUser } from "../features/auth/authSlice";
+import { Credentials } from "../types/auth/Credentials";
 
 function Login() {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const [authPhoneNumber] = useAuthPhoneNumberMutation();
   const [login] = useLoginMutation();
   const [phone, setPhone] = useState("");
-  const [gender, setGender] = useState(""); // Состояние для выбора пола
-
+  const [gender, setGender] = useState(""); // Состояние для выбора patient/doctor
+  const { data: user, refetch: refetchUser } = useGetMeUserQuery(); // Выполняем запрос и получаем refetch функцию
   const handleGenderChange = (event: any) => {
     setGender(event.target.value);
   };
 
   const handleSubmit = async () => {
     authPhoneNumber({ phone_number: "+" + phone });
-    const tokens = await login({ phone_number: phone, code: "1111", who_am_i: gender }).unwrap();
+    const tokens = await login({
+      phone_number: phone,
+      code: "1111",
+      who_am_i: gender,
+    }).unwrap();
     dispatch(setCredentials(tokens));
+    refetchUser();
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch } from "../store/hooks";
 import {
   useAuthPhoneNumberMutation,
   useLoginMutation,
